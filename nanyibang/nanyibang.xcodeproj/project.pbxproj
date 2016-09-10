@@ -12,6 +12,16 @@
 		E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11587F41D83FFE600F8E683 /* HYTabBarController.m */; };
 		E11588041D83FFE600F8E683 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E11587F51D83FFE600F8E683 /* Info.plist */; };
 		E11588051D83FFE600F8E683 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E11587F61D83FFE600F8E683 /* main.m */; };
+		E11588091D84025C00F8E683 /* HYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588081D84025C00F8E683 /* HYNavigationController.m */; };
+		E115880D1D841B2600F8E683 /* CollocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115880C1D841B2600F8E683 /* CollocationViewController.m */; };
+		E11588101D841B5000F8E683 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115880F1D841B5000F8E683 /* DiscoverViewController.m */; };
+		E11588131D841B5D00F8E683 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588121D841B5D00F8E683 /* MeViewController.m */; };
+		E11588161D841B6E00F8E683 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588151D841B6E00F8E683 /* RecommendViewController.m */; };
+		E11588191D841B8700F8E683 /* SingleProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588181D841B8700F8E683 /* SingleProductViewController.m */; };
+		E115881C1D8442EB00F8E683 /* ChangeAgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E115881B1D8442EB00F8E683 /* ChangeAgeView.m */; };
+		E11588261D844E9100F8E683 /* UIBarButtonItem+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588251D844E9100F8E683 /* UIBarButtonItem+HYExtension.m */; };
+		E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588281D844EBC00F8E683 /* UIView+HYExtension.m */; };
+		E115882C1D84545700F8E683 /* HYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115882B1D84545700F8E683 /* HYViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +33,27 @@
 		E11587F41D83FFE600F8E683 /* HYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTabBarController.m; sourceTree = "<group>"; };
 		E11587F51D83FFE600F8E683 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E11587F61D83FFE600F8E683 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E11588071D84025C00F8E683 /* HYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYNavigationController.h; sourceTree = "<group>"; };
+		E11588081D84025C00F8E683 /* HYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYNavigationController.m; sourceTree = "<group>"; };
+		E115880A1D84182E00F8E683 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E115880B1D841B2600F8E683 /* CollocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollocationViewController.h; sourceTree = "<group>"; };
+		E115880C1D841B2600F8E683 /* CollocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollocationViewController.m; sourceTree = "<group>"; };
+		E115880E1D841B5000F8E683 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		E115880F1D841B5000F8E683 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		E11588111D841B5D00F8E683 /* MeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		E11588121D841B5D00F8E683 /* MeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		E11588141D841B6E00F8E683 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
+		E11588151D841B6E00F8E683 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		E11588171D841B8700F8E683 /* SingleProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleProductViewController.h; sourceTree = "<group>"; };
+		E11588181D841B8700F8E683 /* SingleProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleProductViewController.m; sourceTree = "<group>"; };
+		E115881A1D8442EB00F8E683 /* ChangeAgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeAgeView.h; sourceTree = "<group>"; };
+		E115881B1D8442EB00F8E683 /* ChangeAgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeAgeView.m; sourceTree = "<group>"; };
+		E11588241D844E9100F8E683 /* UIBarButtonItem+HYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HYExtension.h"; sourceTree = "<group>"; };
+		E11588251D844E9100F8E683 /* UIBarButtonItem+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HYExtension.m"; sourceTree = "<group>"; };
+		E11588271D844EBC00F8E683 /* UIView+HYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HYExtension.h"; sourceTree = "<group>"; };
+		E11588281D844EBC00F8E683 /* UIView+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HYExtension.m"; sourceTree = "<group>"; };
+		E115882A1D84545700F8E683 /* HYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYViewController.h; sourceTree = "<group>"; };
+		E115882B1D84545700F8E683 /* HYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +103,11 @@
 		E11587E21D83FFE600F8E683 /* Classs */ = {
 			isa = PBXGroup;
 			children = (
+				E11587FA1D83FFE600F8E683 /* Recommend */,
+				E11587FE1D83FFE600F8E683 /* SingleProduct */,
 				E11587E31D83FFE600F8E683 /* Collocation */,
 				E11587E71D83FFE600F8E683 /* Discover */,
 				E11587EB1D83FFE600F8E683 /* Me */,
-				E11587FA1D83FFE600F8E683 /* Recommend */,
-				E11587FE1D83FFE600F8E683 /* SingleProduct */,
 				E11587EF1D83FFE600F8E683 /* Other */,
 			);
 			path = Classs;
@@ -95,6 +126,8 @@
 		E11587E41D83FFE600F8E683 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E115880B1D841B2600F8E683 /* CollocationViewController.h */,
+				E115880C1D841B2600F8E683 /* CollocationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +159,8 @@
 		E11587E81D83FFE600F8E683 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E115880E1D841B5000F8E683 /* DiscoverViewController.h */,
+				E115880F1D841B5000F8E683 /* DiscoverViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +192,8 @@
 		E11587EC1D83FFE600F8E683 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E11588111D841B5D00F8E683 /* MeViewController.h */,
+				E11588121D841B5D00F8E683 /* MeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,8 +217,10 @@
 			children = (
 				E11587F21D83FFE600F8E683 /* Controller */,
 				E11587F71D83FFE600F8E683 /* View */,
+				E115881D1D84467900F8E683 /* Category */,
 				E11587F01D83FFE600F8E683 /* AppDelegate.h */,
 				E11587F11D83FFE600F8E683 /* AppDelegate.m */,
+				E115880A1D84182E00F8E683 /* PrefixHeader.pch */,
 				E11587F51D83FFE600F8E683 /* Info.plist */,
 				E11587F61D83FFE600F8E683 /* main.m */,
 			);
@@ -193,6 +232,10 @@
 			children = (
 				E11587F31D83FFE600F8E683 /* HYTabBarController.h */,
 				E11587F41D83FFE600F8E683 /* HYTabBarController.m */,
+				E11588071D84025C00F8E683 /* HYNavigationController.h */,
+				E11588081D84025C00F8E683 /* HYNavigationController.m */,
+				E115882A1D84545700F8E683 /* HYViewController.h */,
+				E115882B1D84545700F8E683 /* HYViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +243,8 @@
 		E11587F71D83FFE600F8E683 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E115881A1D8442EB00F8E683 /* ChangeAgeView.h */,
+				E115881B1D8442EB00F8E683 /* ChangeAgeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +262,8 @@
 		E11587FB1D83FFE600F8E683 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E11588141D841B6E00F8E683 /* RecommendViewController.h */,
+				E11588151D841B6E00F8E683 /* RecommendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -248,6 +295,8 @@
 		E11587FF1D83FFE600F8E683 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E11588171D841B8700F8E683 /* SingleProductViewController.h */,
+				E11588181D841B8700F8E683 /* SingleProductViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +313,17 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E115881D1D84467900F8E683 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E11588271D844EBC00F8E683 /* UIView+HYExtension.h */,
+				E11588281D844EBC00F8E683 /* UIView+HYExtension.m */,
+				E11588241D844E9100F8E683 /* UIBarButtonItem+HYExtension.h */,
+				E11588251D844E9100F8E683 /* UIBarButtonItem+HYExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,9 +396,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11588191D841B8700F8E683 /* SingleProductViewController.m in Sources */,
+				E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */,
+				E11588091D84025C00F8E683 /* HYNavigationController.m in Sources */,
+				E11588101D841B5000F8E683 /* DiscoverViewController.m in Sources */,
+				E11588131D841B5D00F8E683 /* MeViewController.m in Sources */,
+				E115882C1D84545700F8E683 /* HYViewController.m in Sources */,
 				E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */,
 				E11588021D83FFE600F8E683 /* AppDelegate.m in Sources */,
+				E11588161D841B6E00F8E683 /* RecommendViewController.m in Sources */,
 				E11588051D83FFE600F8E683 /* main.m in Sources */,
+				E11588261D844E9100F8E683 /* UIBarButtonItem+HYExtension.m in Sources */,
+				E115881C1D8442EB00F8E683 /* ChangeAgeView.m in Sources */,
+				E115880D1D841B2600F8E683 /* CollocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +501,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = nanyibang/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = nanyibang/Classs/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/nanyibang/Classs/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.huanying.nanyibang;
@@ -445,7 +517,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = nanyibang/Info.plist;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = nanyibang/Classs/Other/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/nanyibang/Classs/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.huanying.nanyibang;
