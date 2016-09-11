@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ChangeAgeView : UIView
+@interface ChangeAgeView : NSObject
 + (void)show;
 + (void)hide;
 @end

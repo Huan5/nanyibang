@@ -7,8 +7,6 @@
 //
 
 #import "ChangeAgeView.h"
-@interface ChangeAgeView ()
-@end
 @implementation ChangeAgeView
 
 
@@ -26,8 +24,24 @@ static UIButton *currnBtn;
     [self setUpWindow];
     ageWin.subviews.lastObject.x = -ageWin.subviews.lastObject.width;
     ageWin.hidden = NO;
-    [UIView animateWithDuration:0.5 animations:^{
+//    CASpringAnimation *anm = [CASpringAnimation animationWithKeyPath:@"zPosition.x"];
+//    ageWin.subviews.lastObject.layer.anchorPoint = CGPointMake(0.5, 0.5);
+//    anm.removedOnCompletion = NO;
+//    anm.fillMode = kCAFillModeBoth;
+//    anm.fromValue = @(-110);
+//    anm.toValue = @110;
+//    anm.mass = 1;
+//    anm.damping = 0.1;
+//    anm.stiffness = 10;
+//    anm.initialVelocity = 15;
+//    [ageWin.subviews.lastObject.layer addAnimation:anm forKey:@"弹簧"];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        ageWin.subviews.lastObject.x = 0;
+//    }];
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         ageWin.subviews.lastObject.x = 0;
+    } completion:^(BOOL finished) {
+        
     }];
     
 }
@@ -98,8 +112,11 @@ static UIButton *currnBtn;
     button.backgroundColor = HYRGBColor(38, 221, 147);
     currnBtn = button;
 }
-//手势
+//手势处理
 + (void)panGest:(UIPanGestureRecognizer *)pan{
+    
+    
+    
     
     CGPoint currnP = [pan velocityInView:ageWin.subviews.lastObject];
     
@@ -118,8 +135,9 @@ static UIButton *currnBtn;
         if (ageWin.subviews.lastObject.x < -ageWin.subviews.lastObject.width / 2) {
             [self hide];
         }else{
-            [UIView animateWithDuration:0.5 animations:^{
+            [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 ageWin.subviews.lastObject.x = 0;
+            } completion:^(BOOL finished) {
                 
             }];
         }
