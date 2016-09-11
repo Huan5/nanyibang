@@ -22,6 +22,7 @@
 		E11588261D844E9100F8E683 /* UIBarButtonItem+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588251D844E9100F8E683 /* UIBarButtonItem+HYExtension.m */; };
 		E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588281D844EBC00F8E683 /* UIView+HYExtension.m */; };
 		E115882C1D84545700F8E683 /* HYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115882B1D84545700F8E683 /* HYViewController.m */; };
+		E11AB0251D8544F200539F86 /* UIButton+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		E11588281D844EBC00F8E683 /* UIView+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HYExtension.m"; sourceTree = "<group>"; };
 		E115882A1D84545700F8E683 /* HYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYViewController.h; sourceTree = "<group>"; };
 		E115882B1D84545700F8E683 /* HYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYViewController.m; sourceTree = "<group>"; };
+		E11AB0231D8544F200539F86 /* UIButton+HYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HYExtension.h"; sourceTree = "<group>"; };
+		E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HYExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +325,8 @@
 				E11588281D844EBC00F8E683 /* UIView+HYExtension.m */,
 				E11588241D844E9100F8E683 /* UIBarButtonItem+HYExtension.h */,
 				E11588251D844E9100F8E683 /* UIBarButtonItem+HYExtension.m */,
+				E11AB0231D8544F200539F86 /* UIButton+HYExtension.h */,
+				E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */,
 				E11588091D84025C00F8E683 /* HYNavigationController.m in Sources */,
 				E11588101D841B5000F8E683 /* DiscoverViewController.m in Sources */,
+				E11AB0251D8544F200539F86 /* UIButton+HYExtension.m in Sources */,
 				E11588131D841B5D00F8E683 /* MeViewController.m in Sources */,
 				E115882C1D84545700F8E683 /* HYViewController.m in Sources */,
 				E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */,

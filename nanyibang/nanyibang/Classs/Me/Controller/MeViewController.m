@@ -31,9 +31,9 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"mine_setting_25x25_" hightImage:@"mine_setting_25x25_" target:self action:@selector(settingClick)];
 }
 - (void)messageClick{
-    
+    HYLog(@"信息");
 }
 - (void)settingClick{
-    
+    HYLog(@"设置");
 }
 @end

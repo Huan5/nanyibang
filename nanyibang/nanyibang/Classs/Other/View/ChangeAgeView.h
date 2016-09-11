@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ChangeAgeView : UIView
-
++ (void)show;
++ (void)hide;
 @end

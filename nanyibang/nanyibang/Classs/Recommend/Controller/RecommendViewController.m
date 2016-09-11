@@ -20,7 +20,4 @@
     [self setUpNav];
     
 }
-- (void)change_age_Action{
-    HYLog(@"哈哈对了");
-}
 @end

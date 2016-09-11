@@ -24,6 +24,6 @@
     HYLog(@"购物车");
 }
 - (void)change_age_Action{
-    HYLog(@"改变年龄");
+    [ChangeAgeView show];
 }
 @end
