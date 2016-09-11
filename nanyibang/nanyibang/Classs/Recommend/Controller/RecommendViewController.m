@@ -18,6 +18,6 @@
     [super viewDidLoad];
     
     [self setUpNav];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 @end
