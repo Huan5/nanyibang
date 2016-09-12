@@ -7,6 +7,7 @@
 //
 
 #import "RecommendViewController.h"
+#import <AFNetworking.h>
 
 @interface RecommendViewController ()
 
@@ -18,6 +19,11 @@
     [super viewDidLoad];
     
     [self setUpNav];
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setUpCv];
+}
+- (void)setUpCv{
+    
+    
+    
 }
 @end

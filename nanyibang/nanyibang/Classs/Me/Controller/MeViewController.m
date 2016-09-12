@@ -17,11 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpNav];
-    
+    [self setUpvC];
 }
 - (void)setUpNav{
     
-    self.navigationController.navigationBar.backgroundColor = HYRGBColor(67, 191, 204);
+    self.navigationController.navigationBar.backgroundColor = HYRGBColor(0, 180, 200);
     NSMutableDictionary *attrDict = [NSMutableDictionary dictionary];
     attrDict[NSFontAttributeName] = [UIFont systemFontOfSize:20];
     attrDict[NSForegroundColorAttributeName] = [UIColor whiteColor];
@@ -35,5 +35,8 @@
 }
 - (void)settingClick{
     HYLog(@"设置");
+}
+- (void)setUpvC{
+    self.view.backgroundColor = HYRGBColor(240, 240, 240);
 }
 @end

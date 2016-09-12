@@ -18,7 +18,7 @@
     [super viewDidLoad];
     
     [self setUpNav];
-    
+    [self setUpvC];
 }
 - (void)setUpNav{
     UIButton *contributeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -33,5 +33,8 @@
     
     HYLog(@"投稿");
     
+}
+- (void)setUpvC{
+    self.view.backgroundColor = HYRGBColor(240, 240, 240);
 }
 @end

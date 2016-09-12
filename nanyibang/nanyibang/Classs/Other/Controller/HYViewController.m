@@ -15,6 +15,7 @@
     UIBarButtonItem *cartItem =[UIBarButtonItem itemWithImage:@"cart_entry_23x20_" hightImage:@"cart_entry_23x20_" target:self action:@selector(cartClick)];
     self.navigationItem.rightBarButtonItems = @[cartItem,searchItem];
     
+    self.view.backgroundColor = HYRGBColor(240, 240, 240);
     
 }
 - (void)searchClick{

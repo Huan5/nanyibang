@@ -13,17 +13,23 @@
 /**年龄窗口*/
 static UIWindow *ageWin;
 static UIButton *currnBtn;
+static ChangeAgeType currnBtnNumb;
 + (void)setUpWindow{
-    
-    ageWin = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    ageWin.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    if (ageWin == nil) {
+        ageWin = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        ageWin.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    }
     [self setUpView];
     
 }
 + (void)show{
     [self setUpWindow];
     ageWin.subviews.lastObject.x = -ageWin.subviews.lastObject.width;
+    currnBtn.selected = YES;
+    currnBtn.backgroundColor = HYRGBColor(38, 221, 147);
     ageWin.hidden = NO;
+    
+    //HYLog(@"%f",ageWin.layer.position.x);
 //    CASpringAnimation *anm = [CASpringAnimation animationWithKeyPath:@"zPosition.x"];
 //    ageWin.subviews.lastObject.layer.anchorPoint = CGPointMake(0.5, 0.5);
 //    anm.removedOnCompletion = NO;
@@ -54,10 +60,13 @@ static UIButton *currnBtn;
     }];
     
 }
+//设置当前默认的按钮,不设默认为2;
++ (void)setCurrnBtn:(ChangeAgeType)currnBtn{
+    currnBtnNumb = currnBtn;
+}
 //初始化changeAgeView 并添加手势和按钮
 + (void)setUpView{
-    if (ageWin != nil) {
-        
+    if (ageWin.subviews.lastObject == nil ) {
         
         UIView *ageView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 220, HYScreenH)];
         ageView.backgroundColor = [UIColor whiteColor];
@@ -88,6 +97,9 @@ static UIButton *currnBtn;
         CGFloat btnH = 60;
         for (NSInteger i = 0; i<titels.count ; i++) {
             UIButton *ageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            if (i == (currnBtnNumb==0 ? 2:currnBtnNumb)) {
+                    currnBtn = ageBtn;
+                }
             ageBtn.tag = i;
             [ageBtn addTarget:self action:@selector(changeAgeClick:) forControlEvents:UIControlEventTouchUpInside];
             ageBtn.frame = CGRectMake(0, startbtnY + (i * btnH), btnW, btnH);
