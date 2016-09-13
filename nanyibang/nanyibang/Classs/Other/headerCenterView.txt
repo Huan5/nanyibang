@@ -1,0 +1,77 @@
+{
+	"user": {
+		"member_type": "guest",
+		"login_status": "error",
+		"login_status_msg": "not login in"
+	},
+	"data": {
+		"match": [],
+		"school": [{
+			"dress_school_id": 543,
+			"title": "\u578b\u7537\u5927\u6539\u9020\u7b2c3\u671f",
+			"info": " \u4f60\u7f3a\u7684\u4e0d\u662f\u989c\uff0c\u662f\u6539\u9020\uff01\uff01\uff01",
+			"image": "http:\/\/im01.nanyibang.com\/school\/2016\/09\/09\/SCHOOL29839911.jpg",
+			"clickCount": 6165,
+			"link": "http:\/\/www.nanyibang.com\/utils\/webpage_jump.php?module_type=school&school_id=543"
+		}, {
+			"dress_school_id": 544,
+			"title": "\u6765\u7537\u8863\u90a6\u5c31\u50cf\u8fdb\u4e86\u6574\u5bb9\u9662\uff01",
+			"info": "\u6765\u7537\u8863\u90a6\u5c31\u50cf\u8fdb\u4e86\u6574\u5bb9\u9662\uff01",
+			"image": "http:\/\/im01.nanyibang.com\/school\/2016\/09\/09\/SCHOOL3134648.jpg",
+			"clickCount": 2931,
+			"link": "http:\/\/www.nanyibang.com\/utils\/webpage_jump.php?module_type=school&school_id=544"
+		}],
+		"brand": [{
+			"brandId": 8688,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/06\/23\/nike.jpg",
+			"brandName": "NIKE\u5b98\u65b9\u65d7\u8230\u5e97"
+		}, {
+			"brandId": 8583,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/05\/09\/a21.jpg",
+			"brandName": "a21\u5b98\u65b9\u65d7\u8230\u5e97"
+		}, {
+			"brandId": 8591,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/06\/30\/1467254233_36448.jpg",
+			"brandName": "\u5e03\u8863\u4f20\u8bf4\u65d7\u8230\u5e97"
+		}, {
+			"brandId": 8582,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/05\/09\/viishow.jpg",
+			"brandName": "viishow\u65d7\u8230\u5e97"
+		}, {
+			"brandId": 8567,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/06\/30\/1467267973_25422.jpg",
+			"brandName": "\u8863\u54c1\u5929\u6210\u65d7\u8230\u5e97"
+		}, {
+			"brandId": 1206,
+			"brandIcon": "http:\/\/im01.nanyibang.com\/brand\/2016\/04\/13\/AMH.jpg",
+			"brandName": "AMH"
+		}],
+		"matchThemes": [{
+			"themeId": 17,
+			"themeDesc": "\u578b\u7537\u7a7f\u642d",
+			"matches": [{
+				"collocation_id": 8256,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/11\/1473563295_23288.jpg?_upt=247c4c781473649512"
+			}, {
+				"collocation_id": 8188,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/11\/1473563431_58911.jpg?_upt=72de8a151473649512"
+			}, {
+				"collocation_id": 8281,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/09\/1473407567_61718.jpg?_upt=3031f53b1473649512"
+			}]
+		}, {
+			"themeId": 16,
+			"themeDesc": "\u521d\u79cb\u6f6e\u642d",
+			"matches": [{
+				"collocation_id": 8312,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/11\/1473564140_68487.jpg?_upt=1ce6d9e41473649512"
+			}, {
+				"collocation_id": 8153,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/07\/1473232506_93554.jpg?_upt=4479b4c31473649512"
+			}, {
+				"collocation_id": 8186,
+				"big_image": "http:\/\/im02.nanyibang.com\/match\/2016\/09\/07\/1473236055_85328.jpg?_upt=22a2b4041473649512"
+			}]
+		}]
+	}
+}

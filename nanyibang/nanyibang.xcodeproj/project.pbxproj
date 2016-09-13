@@ -24,6 +24,14 @@
 		E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588281D844EBC00F8E683 /* UIView+HYExtension.m */; };
 		E115882C1D84545700F8E683 /* HYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115882B1D84545700F8E683 /* HYViewController.m */; };
 		E11AB0251D8544F200539F86 /* UIButton+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */; };
+		E1A301CD1D86B862001A9575 /* HYThemeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A301CB1D86B862001A9575 /* HYThemeHeaderView.m */; };
+		E1A301CE1D86B862001A9575 /* HYThemeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A301CC1D86B862001A9575 /* HYThemeHeaderView.xib */; };
+		E1A301D11D86D44E001A9575 /* HYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A301D01D86D44E001A9575 /* HYConst.m */; };
+		E1A301D41D86DA13001A9575 /* HYVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A301D31D86DA13001A9575 /* HYVerticalButton.m */; };
+		E1CACB011D86A5E800B5A7B3 /* HYThemeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CACB001D86A5E800B5A7B3 /* HYThemeHeader.m */; };
+		E1FE8AAD1D87D88C00C6D0FF /* headerCenterView.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1FE8AAA1D87D88C00C6D0FF /* headerCenterView.txt */; };
+		E1FE8AAE1D87D88C00C6D0FF /* headerView.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1FE8AAB1D87D88C00C6D0FF /* headerView.txt */; };
+		E1FE8AAF1D87D88C00C6D0FF /* jingxuan.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1FE8AAC1D87D88C00C6D0FF /* jingxuan.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +69,18 @@
 		E115882B1D84545700F8E683 /* HYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYViewController.m; sourceTree = "<group>"; };
 		E11AB0231D8544F200539F86 /* UIButton+HYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HYExtension.h"; sourceTree = "<group>"; };
 		E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HYExtension.m"; sourceTree = "<group>"; };
+		E1A301CA1D86B862001A9575 /* HYThemeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThemeHeaderView.h; sourceTree = "<group>"; };
+		E1A301CB1D86B862001A9575 /* HYThemeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThemeHeaderView.m; sourceTree = "<group>"; };
+		E1A301CC1D86B862001A9575 /* HYThemeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYThemeHeaderView.xib; sourceTree = "<group>"; };
+		E1A301CF1D86D44E001A9575 /* HYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYConst.h; sourceTree = "<group>"; };
+		E1A301D01D86D44E001A9575 /* HYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYConst.m; sourceTree = "<group>"; };
+		E1A301D21D86DA13001A9575 /* HYVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYVerticalButton.h; sourceTree = "<group>"; };
+		E1A301D31D86DA13001A9575 /* HYVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYVerticalButton.m; sourceTree = "<group>"; };
+		E1CACAFF1D86A5E800B5A7B3 /* HYThemeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThemeHeader.h; sourceTree = "<group>"; };
+		E1CACB001D86A5E800B5A7B3 /* HYThemeHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYThemeHeader.m; sourceTree = "<group>"; };
+		E1FE8AAA1D87D88C00C6D0FF /* headerCenterView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = headerCenterView.txt; sourceTree = "<group>"; };
+		E1FE8AAB1D87D88C00C6D0FF /* headerView.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = headerView.txt; sourceTree = "<group>"; };
+		E1FE8AAC1D87D88C00C6D0FF /* jingxuan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jingxuan.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,8 +268,13 @@
 				E11587F01D83FFE600F8E683 /* AppDelegate.h */,
 				E11587F11D83FFE600F8E683 /* AppDelegate.m */,
 				E115880A1D84182E00F8E683 /* PrefixHeader.pch */,
+				E1A301CF1D86D44E001A9575 /* HYConst.h */,
+				E1A301D01D86D44E001A9575 /* HYConst.m */,
 				E11587F51D83FFE600F8E683 /* Info.plist */,
 				E11587F61D83FFE600F8E683 /* main.m */,
+				E1FE8AAA1D87D88C00C6D0FF /* headerCenterView.txt */,
+				E1FE8AAB1D87D88C00C6D0FF /* headerView.txt */,
+				E1FE8AAC1D87D88C00C6D0FF /* jingxuan.txt */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -281,7 +306,7 @@
 			children = (
 				E11587FB1D83FFE600F8E683 /* Controller */,
 				E11587FC1D83FFE600F8E683 /* Model */,
-				E11587FD1D83FFE600F8E683 /* View */,
+				E1A301C91D86B862001A9575 /* View */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -298,15 +323,10 @@
 		E11587FC1D83FFE600F8E683 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1CACAFF1D86A5E800B5A7B3 /* HYThemeHeader.h */,
+				E1CACB001D86A5E800B5A7B3 /* HYThemeHeader.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		E11587FD1D83FFE600F8E683 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E11587FE1D83FFE600F8E683 /* SingleProduct */ = {
@@ -345,6 +365,8 @@
 		E115881D1D84467900F8E683 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E1A301D21D86DA13001A9575 /* HYVerticalButton.h */,
+				E1A301D31D86DA13001A9575 /* HYVerticalButton.m */,
 				E11588271D844EBC00F8E683 /* UIView+HYExtension.h */,
 				E11588281D844EBC00F8E683 /* UIView+HYExtension.m */,
 				E11588241D844E9100F8E683 /* UIBarButtonItem+HYExtension.h */,
@@ -353,6 +375,16 @@
 				E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		E1A301C91D86B862001A9575 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1A301CA1D86B862001A9575 /* HYThemeHeaderView.h */,
+				E1A301CB1D86B862001A9575 /* HYThemeHeaderView.m */,
+				E1A301CC1D86B862001A9575 /* HYThemeHeaderView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +449,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11588041D83FFE600F8E683 /* Info.plist in Resources */,
+				E1FE8AAE1D87D88C00C6D0FF /* headerView.txt in Resources */,
 				E11587D51D83C72000F8E683 /* Assets.xcassets in Resources */,
+				E1A301CE1D86B862001A9575 /* HYThemeHeaderView.xib in Resources */,
+				E1FE8AAF1D87D88C00C6D0FF /* jingxuan.txt in Resources */,
+				E1FE8AAD1D87D88C00C6D0FF /* headerCenterView.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,15 +514,19 @@
 			files = (
 				E11588191D841B8700F8E683 /* SingleProductViewController.m in Sources */,
 				E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */,
+				E1A301D11D86D44E001A9575 /* HYConst.m in Sources */,
 				E11588091D84025C00F8E683 /* HYNavigationController.m in Sources */,
 				E11588101D841B5000F8E683 /* DiscoverViewController.m in Sources */,
 				E11AB0251D8544F200539F86 /* UIButton+HYExtension.m in Sources */,
 				E11588131D841B5D00F8E683 /* MeViewController.m in Sources */,
+				E1A301CD1D86B862001A9575 /* HYThemeHeaderView.m in Sources */,
+				E1CACB011D86A5E800B5A7B3 /* HYThemeHeader.m in Sources */,
 				E115882C1D84545700F8E683 /* HYViewController.m in Sources */,
 				E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */,
 				E11588021D83FFE600F8E683 /* AppDelegate.m in Sources */,
 				E11588161D841B6E00F8E683 /* RecommendViewController.m in Sources */,
 				E11588051D83FFE600F8E683 /* main.m in Sources */,
+				E1A301D41D86DA13001A9575 /* HYVerticalButton.m in Sources */,
 				E11588261D844E9100F8E683 /* UIBarButtonItem+HYExtension.m in Sources */,
 				E115881C1D8442EB00F8E683 /* ChangeAgeView.m in Sources */,
 				E115880D1D841B2600F8E683 /* CollocationViewController.m in Sources */,
