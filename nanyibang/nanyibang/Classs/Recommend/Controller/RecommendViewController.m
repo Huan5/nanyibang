@@ -34,12 +34,15 @@
     
 }
 - (void)setUpCv{
+    UIScrollView *scroll = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, HYScreenW, HYScreenH)];
     
     self.headerView = [HYThemeHeaderView ThemeHeaderView];
     //self.headerView.themeHeaderArray = self.headerArr;
-    self.headerView.frame = CGRectMake(0, -60, HYScreenW, HYScreenH);
+    self.headerView.frame = CGRectMake(0, 0, HYScreenW, 1881);
     [self.headerView setUpData];
-    [self.view addSubview:self.headerView];
+    [scroll addSubview:self.headerView];
+    scroll.contentSize = CGSizeMake(0, 1881);
+    [self.view addSubview:scroll];
 }
 - (void)loadNewTheme{
     //参数

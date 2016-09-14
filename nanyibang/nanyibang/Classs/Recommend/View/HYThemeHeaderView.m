@@ -8,8 +8,11 @@
 
 #import "HYThemeHeaderView.h"
 #import "HYThemeHeader.h"
+#import "collocationModel.h"
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
+
+#import "HYThemeHeaderView.h"
 
 @interface HYThemeHeaderView ()
 /**头部的View*/
@@ -18,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet UIView *selectView;
 @property (weak, nonatomic) IBOutlet UIView *specialView;
 @property (weak, nonatomic) IBOutlet UIView *brandView;
+@property (weak, nonatomic) IBOutlet UIView *collocation1View;
+@property (weak, nonatomic) IBOutlet UIView *collocation2View;
+@property (weak, nonatomic) IBOutlet UIView *dicoverView;
 /**轮播器模型数组*/
 @property(nonatomic,strong)NSMutableArray *scrollImageArr;
 /**各标题数组*/
@@ -26,11 +32,18 @@
 @property(nonatomic,strong)NSMutableArray *specialArr;
 /**品牌组模型数组*/
 @property(nonatomic,strong)NSMutableArray *brandArr;
+/**搭配组的模型数组*/
+@property(nonatomic,strong)NSMutableArray *collocationArr;
+/**帅吧组的模型数组*/
+@property(nonatomic,strong)NSMutableArray *discoverArr;
+
 @end
 
 @implementation HYThemeHeaderView
 +(instancetype)ThemeHeaderView{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]firstObject];
+    HYThemeHeaderView *header = [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]firstObject];
+    header.width = 1881;
+    return header;
 }
 - (void)awakeFromNib{
     //[self setUpData];
@@ -38,7 +51,12 @@
 - (void)setUpData{
     self.themeHeaderArray = [self getItemArrayFromDataWithfileName:@"headerView.txt" arrayWithKey:@"data"];
     self.brandArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.brand"];
+    self.collocationArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.matchThemes"];
 }
+
+
+
+#pragma mark - 工具
 //获取相应的数据
 - (NSMutableArray *)getItemArrayFromDataWithfileName:(NSString *)name arrayWithKey:(NSString *)key{
     NSString *path = [[NSBundle mainBundle]pathForResource:name ofType:nil];
@@ -54,12 +72,58 @@
         case 2:
             itemArr = [HYThemeHeader mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]]];
             break;
-            
+        case 3:
+            itemArr = [HYThemeHeader mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]][arrString[2]]];
+            break;
         default:
             break;
     }
     return itemArr;
 }
+//设置按钮的网络图片
+- (void)setImagewithBtn:(UIButton *)btn URLString:(NSString *)urlString action:(SEL)action{
+    [btn.imageView sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [btn setImage:image forState:UIControlStateNormal];
+        //HYLog(@"%@",image);
+    }];
+    [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+#pragma mark - 初始化不同的View
+//设置搭配View
+- (void)setCollocationArr:(NSMutableArray *)collocationArr{
+    _collocationArr = collocationArr;
+    HYThemeHeader *them1 = collocationArr[0];
+    HYThemeHeader *them2 = collocationArr[1];
+    
+    UILabel *lab1 = self.collocation1View.subviews.lastObject;
+    lab1.text = them1.themeDesc;
+    UILabel *lab2 = self.collocation2View.subviews.lastObject;
+    lab2.text = them2.themeDesc;
+    
+    
+    collocationModel *model = them1.matches[2];
+    HYLog(@"%@",model.big_image);
+    
+    for (int i = 0; i<them1.matches.count; i ++) {
+        collocationModel *model = them1.matches[i];
+        UIButton *btn = self.collocation1View.subviews[i];
+        btn.tag = i;
+        [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
+    }
+    
+    for (int i = 0; i<them2.matches.count; i ++) {
+        collocationModel *model = them2.matches[i];
+        UIButton *btn = self.collocation1View.subviews[i];
+        btn.tag = i+them2.matches.count;
+        [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
+    }
+    
+    
+}
+
+//设置品牌View
 -(void)setBrandArr:(NSMutableArray *)brandArr{
     _brandArr = brandArr;
     
@@ -67,14 +131,11 @@
         HYThemeHeader *them = brandArr[i];
         UIButton *btn = self.brandView.subviews[i];
         btn.tag = i;
-        [btn.imageView sd_setImageWithURL:[NSURL URLWithString:them.brandIcon] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            HYLog(@"%@",image);
-            [btn setImage:image forState:UIControlStateNormal];
-        }];
-        [btn addTarget:self action:@selector(brandAction:) forControlEvents:UIControlEventTouchUpInside];
+        [self setImagewithBtn:btn URLString:them.brandIcon action:@selector(brandAction:)];
     }
     
 }
+//分配数据
 - (void)setThemeHeaderArray:(NSMutableArray *)themeHeaderArray{
     _themeHeaderArray = themeHeaderArray;
     
@@ -102,11 +163,10 @@
     self.selectArr = selectIthems;
     self.specialArr = specialIthems;
 }
+//设置轮播器
 -(void)setScrollImageArr:(NSMutableArray *)scrollImageArr{
     
     _scrollImageArr = scrollImageArr;
-    
-    HYLog(@"---scrollImageArr%@",self.scrollImageArr);
     
     NSMutableArray *images = [NSMutableArray array];
     for (HYThemeHeader *imageItem in scrollImageArr) {
@@ -115,13 +175,9 @@
     //创建轮播器
     [self.ScrollImageView addSubview:[[UIView alloc]init]];
 }
+//设置头
 - (void)setSelectArr:(NSMutableArray *)selectArr{
     _selectArr = selectArr;
-    
-    
-    HYLog(@"---selectArr%@",self.selectArr);
-    
-    HYLog(@"--%f",HYScreenW);
     CGFloat w = HYScreenW/selectArr.count;
     CGFloat h = 75;
     CGFloat starty = 0;
@@ -136,27 +192,29 @@
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         NSDictionary *attrDic = [NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:14] forKey:NSFontAttributeName];
         [btn setAttributedTitle:[[NSAttributedString alloc]initWithString:ithem.theme_name attributes:attrDic] forState:UIControlStateNormal];
-        [btn.imageView sd_setImageWithURL:[NSURL URLWithString:ithem.theme_image] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            [btn setImage:image forState:UIControlStateNormal];
-        }];
+        [self setImagewithBtn:btn URLString:ithem.theme_image action:@selector(action:)];
         btn.frame = CGRectMake(endx, starty, w, h);
         btn.tag = i;
-        [btn addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.selectView addSubview:btn];
     }
 }
+//特色View
 - (void)setSpecialArr:(NSMutableArray *)specialArr{
     _specialArr = specialArr;
     for (int i = 0; i<specialArr.count; i ++) {
         HYThemeHeader *item = specialArr[i];
         UIButton *imgBtnView = self.specialView.subviews[i];
-        [imgBtnView addTarget:self action:@selector(specialAction:) forControlEvents:UIControlEventTouchUpInside];
-        [imgBtnView.imageView sd_setImageWithURL:[NSURL URLWithString:item.theme_image] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            [imgBtnView setImage:image forState:UIControlStateNormal];
-        }];
+        [self setImagewithBtn:imgBtnView URLString:item.theme_image action:@selector(specialAction:)];
     }
     
-    HYLog(@"---specialArr%@",self.specialArr);
+}
+
+
+#pragma mark - 各View的点击事件
+//搭配点击事件
+- (void)collocationAction:(UIButton *)btn{
+    HYLog(@"搭配中");
 }
 //点击品牌事件
 - (void)brandAction:(UIButton *)btn{

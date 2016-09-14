@@ -22,4 +22,10 @@
 @property(nonatomic,strong)NSString *type;
 /**品牌图片*/
 @property(nonatomic,strong)NSString *brandIcon;
+/**搭配主题名字*/
+@property(nonatomic,strong)NSString *themeDesc;
+///**搭配模型数组*/
+//@property(nonatomic,strong)NSMutableArray *collocationModelArr;
+/**搭配模型数组*/
+@property(nonatomic,strong)NSMutableArray *matches;
 @end
