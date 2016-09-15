@@ -9,6 +9,7 @@
 #import "HYThemeHeaderView.h"
 #import "HYThemeHeader.h"
 #import "collocationModel.h"
+#import "discoverModel.h"
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
 
@@ -49,16 +50,17 @@
     //[self setUpData];
 }
 - (void)setUpData{
-    self.themeHeaderArray = [self getItemArrayFromDataWithfileName:@"headerView.txt" arrayWithKey:@"data"];
-    self.brandArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.brand"];
-    self.collocationArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.matchThemes"];
+    self.themeHeaderArray = [self getItemArrayFromDataWithfileName:@"headerView.txt" arrayWithKey:@"data" modelClass:[HYThemeHeader class]];
+    self.brandArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.brand" modelClass:[HYThemeHeader class]];
+    self.collocationArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.matchThemes" modelClass:[HYThemeHeader class]];
+    self.discoverArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.school" modelClass:[discoverModel class]];
 }
 
 
 
 #pragma mark - 工具
 //获取相应的数据
-- (NSMutableArray *)getItemArrayFromDataWithfileName:(NSString *)name arrayWithKey:(NSString *)key{
+- (NSMutableArray *)getItemArrayFromDataWithfileName:(NSString *)name arrayWithKey:(NSString *)key modelClass:(Class)class{
     NSString *path = [[NSBundle mainBundle]pathForResource:name ofType:nil];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
@@ -67,13 +69,13 @@
     NSMutableArray *itemArr = [NSMutableArray array];
     switch (arrString.count) {
         case 1:
-            itemArr = [HYThemeHeader mj_objectArrayWithKeyValuesArray:dict[key]];
+            itemArr = [class mj_objectArrayWithKeyValuesArray:dict[key]];
             break;
         case 2:
-            itemArr = [HYThemeHeader mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]]];
+            itemArr = [class mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]]];
             break;
         case 3:
-            itemArr = [HYThemeHeader mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]][arrString[2]]];
+            itemArr = [class mj_objectArrayWithKeyValuesArray:dict[arrString[0]][arrString[1]][arrString[2]]];
             break;
         default:
             break;
@@ -91,6 +93,37 @@
 
 
 #pragma mark - 初始化不同的View
+//设置帅吧View
+- (void)setDiscoverArr:(NSMutableArray *)discoverArr{
+    _discoverArr = discoverArr;
+    for (int i = 0 ; i<discoverArr.count; i ++) {
+        discoverModel *disModel = discoverArr[i];
+        UIView *disView = self.dicoverView.subviews[i];
+        for (int j = 0; j<4; j++) {
+            if (j == 1) {
+                UILabel *name = disView.subviews[j];
+                name.text = disModel.title;
+                continue;
+            }
+            UIButton *btn = disView.subviews[j];;
+            if (j==0) {
+                btn.tag = i;
+                [self setImagewithBtn:btn URLString:disModel.image action:@selector(dicoverAction:)];
+            }
+            if (j==2) {
+                NSInteger count = disModel.clickCount;
+                [btn setTitle:[NSString stringWithFormat:@"%ld人查看",count] forState:UIControlStateNormal];
+            }
+            if (j==3) {
+                btn.tag = i;
+                [btn addTarget:self action:@selector(dicoverAction:) forControlEvents:UIControlEventTouchUpInside];
+            }
+            
+            
+        }
+        
+    }
+}
 //设置搭配View
 - (void)setCollocationArr:(NSMutableArray *)collocationArr{
     _collocationArr = collocationArr;
@@ -102,10 +135,6 @@
     UILabel *lab2 = self.collocation2View.subviews.lastObject;
     lab2.text = them2.themeDesc;
     
-    
-    collocationModel *model = them1.matches[2];
-    HYLog(@"%@",model.big_image);
-    
     for (int i = 0; i<them1.matches.count; i ++) {
         collocationModel *model = them1.matches[i];
         UIButton *btn = self.collocation1View.subviews[i];
@@ -115,7 +144,7 @@
     
     for (int i = 0; i<them2.matches.count; i ++) {
         collocationModel *model = them2.matches[i];
-        UIButton *btn = self.collocation1View.subviews[i];
+        UIButton *btn = self.collocation2View.subviews[i];
         btn.tag = i+them2.matches.count;
         [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
     }
@@ -212,8 +241,14 @@
 
 
 #pragma mark - 各View的点击事件
+- (void)dicoverAction:(UIButton *)btn{
+    discoverModel *model = self.discoverArr[btn.tag];
+    NSString *str = model.link;
+    HYLog(@"真帅%@",str);
+}
 //搭配点击事件
 - (void)collocationAction:(UIButton *)btn{
+    
     HYLog(@"搭配中");
 }
 //点击品牌事件

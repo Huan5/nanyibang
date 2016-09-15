@@ -8,13 +8,16 @@
 
 #import "HYThemeHeader.h"
 #import "collocationModel.h"
+#import "discoverModel.h"
 #import <MJExtension.h>
 
 @implementation HYThemeHeader
 
 + (NSDictionary *)mj_objectClassInArray{
     
-    return @{@"matches": @"collocationModel"};
+    return @{@"matches": @"collocationModel",
+             @"school":[discoverModel class]
+             };
 }
 +(NSDictionary *)mj_replacedKeyFromPropertyName{
     return @{

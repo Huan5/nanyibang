@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C21F83310DD7FE0FA8FCD908 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361F5654261D3C8EC4AE8536 /* libPods.a */; };
+		E108F7171D8A331E00309A49 /* discoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E108F7161D8A331E00309A49 /* discoverModel.m */; };
 		E11587D51D83C72000F8E683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E11587D41D83C72000F8E683 /* Assets.xcassets */; };
 		E11588021D83FFE600F8E683 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E11587F11D83FFE600F8E683 /* AppDelegate.m */; };
 		E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E11587F41D83FFE600F8E683 /* HYTabBarController.m */; };
@@ -39,6 +40,8 @@
 		361F5654261D3C8EC4AE8536 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6587FE401B29E8052427C7E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D39DBA9481C4E6F6C5476552 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E108F7151D8A331E00309A49 /* discoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discoverModel.h; sourceTree = "<group>"; };
+		E108F7161D8A331E00309A49 /* discoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = discoverModel.m; sourceTree = "<group>"; };
 		E11587C51D83C72000F8E683 /* nanyibang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nanyibang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11587D41D83C72000F8E683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E11587F01D83FFE600F8E683 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				E1CACB001D86A5E800B5A7B3 /* HYThemeHeader.m */,
 				E17EF6AD1D891ED7004DE136 /* collocationModel.h */,
 				E17EF6AE1D891ED7004DE136 /* collocationModel.m */,
+				E108F7151D8A331E00309A49 /* discoverModel.h */,
+				E108F7161D8A331E00309A49 /* discoverModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				E1A301D41D86DA13001A9575 /* HYVerticalButton.m in Sources */,
 				E11588261D844E9100F8E683 /* UIBarButtonItem+HYExtension.m in Sources */,
 				E115881C1D8442EB00F8E683 /* ChangeAgeView.m in Sources */,
+				E108F7171D8A331E00309A49 /* discoverModel.m in Sources */,
 				E115880D1D841B2600F8E683 /* CollocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

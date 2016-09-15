@@ -132,7 +132,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.1199243255" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Dwe-ho-oft" secondAttribute="bottom" constant="40" id="2lh-Dn-ORf"/>
                         <constraint firstItem="961-Xd-Ed0" firstAttribute="leading" secondItem="Ucy-Sb-PF4" secondAttribute="trailing" constant="7" id="3HT-xn-RuJ"/>
@@ -177,7 +177,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.1199243255" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="emr-Im-nq0" secondAttribute="trailing" constant="7" id="0Ci-oG-bUb"/>
                         <constraint firstAttribute="trailing" secondItem="RpE-SW-cnq" secondAttribute="trailing" constant="8" id="3Lj-qc-qK4"/>
@@ -340,7 +340,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="D4l-pV-rzc" firstAttribute="centerX" secondItem="qD5-nN-hJh" secondAttribute="centerX" id="669-uN-dDA"/>
                                 <constraint firstItem="Wm3-nr-ur4" firstAttribute="centerY" secondItem="qD5-nN-hJh" secondAttribute="centerY" id="8jl-C0-GQ6"/>
@@ -479,7 +479,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="53" id="9Bm-Fq-RhM"/>
                         <constraint firstItem="EsE-ZT-tdD" firstAttribute="centerY" secondItem="5UQ-De-KSv" secondAttribute="centerY" id="ElQ-wX-MwS"/>

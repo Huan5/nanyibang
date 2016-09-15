@@ -28,4 +28,7 @@
 //@property(nonatomic,strong)NSMutableArray *collocationModelArr;
 /**搭配模型数组*/
 @property(nonatomic,strong)NSMutableArray *matches;
+/**帅吧模型数组*/
+@property(nonatomic,strong)NSMutableArray *school;
+
 @end
