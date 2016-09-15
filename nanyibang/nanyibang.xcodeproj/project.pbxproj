@@ -25,6 +25,7 @@
 		E11588291D844EBC00F8E683 /* UIView+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11588281D844EBC00F8E683 /* UIView+HYExtension.m */; };
 		E115882C1D84545700F8E683 /* HYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E115882B1D84545700F8E683 /* HYViewController.m */; };
 		E11AB0251D8544F200539F86 /* UIButton+HYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */; };
+		E143126C1D8A76B8001C128C /* SZKRoundScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E143126B1D8A76B8001C128C /* SZKRoundScrollView.m */; };
 		E17EF6AF1D891ED7004DE136 /* collocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E17EF6AE1D891ED7004DE136 /* collocationModel.m */; };
 		E1A301CD1D86B862001A9575 /* HYThemeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A301CB1D86B862001A9575 /* HYThemeHeaderView.m */; };
 		E1A301CE1D86B862001A9575 /* HYThemeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A301CC1D86B862001A9575 /* HYThemeHeaderView.xib */; };
@@ -73,6 +74,8 @@
 		E115882B1D84545700F8E683 /* HYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYViewController.m; sourceTree = "<group>"; };
 		E11AB0231D8544F200539F86 /* UIButton+HYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HYExtension.h"; sourceTree = "<group>"; };
 		E11AB0241D8544F200539F86 /* UIButton+HYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HYExtension.m"; sourceTree = "<group>"; };
+		E143126A1D8A76B8001C128C /* SZKRoundScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZKRoundScrollView.h; sourceTree = "<group>"; };
+		E143126B1D8A76B8001C128C /* SZKRoundScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZKRoundScrollView.m; sourceTree = "<group>"; };
 		E17EF6AD1D891ED7004DE136 /* collocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collocationModel.h; sourceTree = "<group>"; };
 		E17EF6AE1D891ED7004DE136 /* collocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collocationModel.m; sourceTree = "<group>"; };
 		E1A301CA1D86B862001A9575 /* HYThemeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYThemeHeaderView.h; sourceTree = "<group>"; };
@@ -393,6 +396,8 @@
 				E1A301CA1D86B862001A9575 /* HYThemeHeaderView.h */,
 				E1A301CB1D86B862001A9575 /* HYThemeHeaderView.m */,
 				E1A301CC1D86B862001A9575 /* HYThemeHeaderView.xib */,
+				E143126A1D8A76B8001C128C /* SZKRoundScrollView.h */,
+				E143126B1D8A76B8001C128C /* SZKRoundScrollView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				E11588031D83FFE600F8E683 /* HYTabBarController.m in Sources */,
 				E11588021D83FFE600F8E683 /* AppDelegate.m in Sources */,
 				E11588161D841B6E00F8E683 /* RecommendViewController.m in Sources */,
+				E143126C1D8A76B8001C128C /* SZKRoundScrollView.m in Sources */,
 				E17EF6AF1D891ED7004DE136 /* collocationModel.m in Sources */,
 				E11588051D83FFE600F8E683 /* main.m in Sources */,
 				E1A301D41D86DA13001A9575 /* HYVerticalButton.m in Sources */,

@@ -7,12 +7,15 @@
 //
 
 #import "HYThemeHeaderView.h"
+
 #import "HYThemeHeader.h"
 #import "collocationModel.h"
 #import "discoverModel.h"
+
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
 
+#import "SZKRoundScrollView.h"
 #import "HYThemeHeaderView.h"
 
 @interface HYThemeHeaderView ()
@@ -201,8 +204,12 @@
     for (HYThemeHeader *imageItem in scrollImageArr) {
         [images addObject:imageItem.theme_image];
     }
+    UIView *scrollView = [SZKRoundScrollView roundScrollViewWithFrame:CGRectMake(0, 0, self.ScrollImageView.width, self.ScrollImageView.height) imageArr:images timerWithTimeInterval:3.0 imageClick:^(NSInteger imageIndex) {
+        HYThemeHeader *image = scrollImageArr[imageIndex];
+        HYLog(@"%@",image.theme_link);
+    }];
     //创建轮播器
-    [self.ScrollImageView addSubview:[[UIView alloc]init]];
+    [self.ScrollImageView addSubview:scrollView];
 }
 //设置头
 - (void)setSelectArr:(NSMutableArray *)selectArr{

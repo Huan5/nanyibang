@@ -43,6 +43,7 @@
     [scroll addSubview:self.headerView];
     scroll.contentSize = CGSizeMake(0, 1881);
     [self.view addSubview:scroll];
+//    UICollectionView *collect = [UICollectionView alloc]initWithFrame:CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>) collectionViewLayout:<#(nonnull UICollectionViewLayout *)#>];
 }
 - (void)loadNewTheme{
     //参数
