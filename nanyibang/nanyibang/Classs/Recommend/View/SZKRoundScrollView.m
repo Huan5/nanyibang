@@ -49,7 +49,7 @@
     if (_timer==nil) {
         //初始化定时器
         _timer = [NSTimer timerWithTimeInterval:_timeInterVal target:self selector:@selector(timerAction) userInfo:nil repeats:YES];
-        [[NSRunLoop mainRunLoop] addTimer:_timer forMode: NSDefaultRunLoopMode];
+        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
         //NSRunLoopCommonModes _myScrollView手动拖动时，继续执行方法
         //NSDefaultRunLoopMode _myScrollView手动拖动时，不执行方法
     }
@@ -57,7 +57,7 @@
 #pragma mark---定时器执行方法
 -(void)timerAction
 {
-    NSLog(@"定时器运行");
+    //NSLog(@"定时器运行");
     //scrollView滑动到下一个页面
     [UIView animateWithDuration:0.25 animations:^{
         _myScrollView.contentOffset=CGPointMake(SCREEN_WIDTH*2, 0);

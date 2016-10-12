@@ -89,6 +89,7 @@
 - (void)setImagewithBtn:(UIButton *)btn URLString:(NSString *)urlString action:(SEL)action{
     [btn.imageView sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [btn setImage:image forState:UIControlStateNormal];
+        btn.showsTouchWhenHighlighted = YES;
         //HYLog(@"%@",image);
     }];
     [btn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
