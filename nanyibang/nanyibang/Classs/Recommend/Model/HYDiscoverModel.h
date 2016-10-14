@@ -1,5 +1,5 @@
 //
-//  discoverModel.h
+//  HYDiscoverModel.h
 //  nanyibang
 //
 //  Created by Huanying on 16/9/15.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface discoverModel : NSObject
+@interface HYDiscoverModel : NSObject
 /**名字*/
 @property(nonatomic,strong)NSString *title;
 /**链接*/

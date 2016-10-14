@@ -127,9 +127,6 @@ static ChangeAgeType currnBtnNumb;
 //手势处理
 + (void)panGest:(UIPanGestureRecognizer *)pan{
     
-    
-    
-    
     CGPoint currnP = [pan velocityInView:ageWin.subviews.lastObject];
     
     if (pan.state == UIGestureRecognizerStateChanged) {

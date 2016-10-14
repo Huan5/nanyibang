@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shopCell" id="QD6-Rb-zDd" customClass="HYShopCell">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="243"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="376" height="243"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-Yj-loX" userLabel="shopImage">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="195"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="男装" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWL-az-jYc" userLabel="标题">
+                        <rect key="frame" x="3" y="195" width="373" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Zdb-cQ-MmJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-qs-TJb" userLabel="价格">
+                        <rect key="frame" x="3" y="222" width="164" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Y6s-yG-ogT"/>
+                            <constraint firstAttribute="width" constant="164" id="hKq-fO-teL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1k-8H-KB6" userLabel="喜欢">
+                        <rect key="frame" x="313" y="215" width="60" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="DAd-fU-Fyn"/>
+                            <constraint firstAttribute="width" constant="60" id="EB4-TI-Y0S"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="199" image="favorite4_20x18_">
+                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </state>
+                        <connections>
+                            <action selector="saveLikeClick" destination="QD6-Rb-zDd" eventType="touchUpInside" id="FBF-eP-X6a"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ISt-Yj-loX" firstAttribute="leading" secondItem="QD6-Rb-zDd" secondAttribute="leading" id="0Av-NT-dwa"/>
+                <constraint firstItem="ISt-Yj-loX" firstAttribute="top" secondItem="QD6-Rb-zDd" secondAttribute="top" id="3J6-Ru-dug"/>
+                <constraint firstAttribute="trailing" secondItem="ISt-Yj-loX" secondAttribute="trailing" id="6h2-Fl-hja"/>
+                <constraint firstAttribute="trailing" secondItem="sWL-az-jYc" secondAttribute="trailing" id="QlE-9L-16Q"/>
+                <constraint firstItem="Fyr-qs-TJb" firstAttribute="leading" secondItem="QD6-Rb-zDd" secondAttribute="leading" constant="3" id="c4r-yO-eVf"/>
+                <constraint firstItem="Fyr-qs-TJb" firstAttribute="top" secondItem="sWL-az-jYc" secondAttribute="bottom" constant="6" id="hAC-6k-Q0S"/>
+                <constraint firstAttribute="bottom" secondItem="c1k-8H-KB6" secondAttribute="bottom" id="hpD-Qb-6ez"/>
+                <constraint firstAttribute="trailing" secondItem="c1k-8H-KB6" secondAttribute="trailing" constant="3" id="iEf-np-WTw"/>
+                <constraint firstAttribute="bottom" secondItem="Fyr-qs-TJb" secondAttribute="bottom" id="oD7-0Q-NJ4"/>
+                <constraint firstItem="sWL-az-jYc" firstAttribute="top" secondItem="ISt-Yj-loX" secondAttribute="bottom" id="pXt-Go-ZTH"/>
+                <constraint firstItem="sWL-az-jYc" firstAttribute="leading" secondItem="QD6-Rb-zDd" secondAttribute="leading" constant="3" id="tc2-11-BBy"/>
+            </constraints>
+            <size key="customSize" width="376" height="243"/>
+            <connections>
+                <outlet property="priceLabel" destination="Fyr-qs-TJb" id="t0e-Gg-PaU"/>
+                <outlet property="saveLikeBtn" destination="c1k-8H-KB6" id="u3s-Qn-n9J"/>
+                <outlet property="shopImage" destination="ISt-Yj-loX" id="xHk-VC-0LC"/>
+                <outlet property="titleLabel" destination="sWL-az-jYc" id="fp4-o0-1ca"/>
+            </connections>
+            <point key="canvasLocation" x="305" y="245.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="favorite4_20x18_" width="20" height="18"/>
+    </resources>
+</document>

@@ -9,8 +9,8 @@
 #import "HYThemeHeaderView.h"
 
 #import "HYThemeHeader.h"
-#import "collocationModel.h"
-#import "discoverModel.h"
+#import "HYCollocationModel.h"
+#import "HYDiscoverModel.h"
 
 #import <UIImageView+WebCache.h>
 #import <MJExtension.h>
@@ -46,7 +46,7 @@
 @implementation HYThemeHeaderView
 +(instancetype)ThemeHeaderView{
     HYThemeHeaderView *header = [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]firstObject];
-    header.width = 1881;
+    header.width = HYRecommendHeaderHeight;
     return header;
 }
 - (void)awakeFromNib{
@@ -56,7 +56,7 @@
     self.themeHeaderArray = [self getItemArrayFromDataWithfileName:@"headerView.txt" arrayWithKey:@"data" modelClass:[HYThemeHeader class]];
     self.brandArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.brand" modelClass:[HYThemeHeader class]];
     self.collocationArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.matchThemes" modelClass:[HYThemeHeader class]];
-    self.discoverArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.school" modelClass:[discoverModel class]];
+    self.discoverArr = [self getItemArrayFromDataWithfileName:@"headerCenterView.txt" arrayWithKey:@"data.school" modelClass:[HYDiscoverModel class]];
 }
 
 
@@ -101,7 +101,7 @@
 - (void)setDiscoverArr:(NSMutableArray *)discoverArr{
     _discoverArr = discoverArr;
     for (int i = 0 ; i<discoverArr.count; i ++) {
-        discoverModel *disModel = discoverArr[i];
+        HYDiscoverModel *disModel = discoverArr[i];
         UIView *disView = self.dicoverView.subviews[i];
         for (int j = 0; j<4; j++) {
             if (j == 1) {
@@ -140,14 +140,14 @@
     lab2.text = them2.themeDesc;
     
     for (int i = 0; i<them1.matches.count; i ++) {
-        collocationModel *model = them1.matches[i];
+        HYCollocationModel *model = them1.matches[i];
         UIButton *btn = self.collocation1View.subviews[i];
         btn.tag = i;
         [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
     }
     
     for (int i = 0; i<them2.matches.count; i ++) {
-        collocationModel *model = them2.matches[i];
+        HYCollocationModel *model = them2.matches[i];
         UIButton *btn = self.collocation2View.subviews[i];
         btn.tag = i+them2.matches.count;
         [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
@@ -250,7 +250,7 @@
 
 #pragma mark - 各View的点击事件
 - (void)dicoverAction:(UIButton *)btn{
-    discoverModel *model = self.discoverArr[btn.tag];
+    HYDiscoverModel *model = self.discoverArr[btn.tag];
     NSString *str = model.link;
     HYLog(@"真帅%@",str);
 }

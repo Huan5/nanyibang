@@ -1,5 +1,5 @@
 //
-//  collocationModel.h
+//  HYCollocationModel.h
 //  nanyibang
 //
 //  Created by Huanying on 16/9/14.
@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface collocationModel : NSObject
+@interface HYCollocationModel : NSObject
+
 /**图片*/
 @property(nonatomic,strong)NSString *big_image;
 @end

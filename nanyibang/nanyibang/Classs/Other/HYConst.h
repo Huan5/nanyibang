@@ -3,3 +3,4 @@
 
 /**精华-cell-间距*/
 UIKIT_EXTERN CGFloat const HYMargin;
+UIKIT_EXTERN CGFloat const HYRecommendHeaderHeight;
