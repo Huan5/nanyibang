@@ -23,7 +23,7 @@
                             <constraint firstAttribute="height" constant="21" id="Zdb-cQ-MmJ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="199.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-qs-TJb" userLabel="价格">
@@ -44,8 +44,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <state key="normal" title="199" image="favorite4_20x18_">
-                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <state key="highlighted" image="favorite4_highlight_20x18_"/>
                         <connections>
                             <action selector="saveLikeClick" destination="QD6-Rb-zDd" eventType="touchUpInside" id="FBF-eP-X6a"/>
                         </connections>
@@ -79,5 +80,6 @@
     </objects>
     <resources>
         <image name="favorite4_20x18_" width="20" height="18"/>
+        <image name="favorite4_highlight_20x18_" width="20" height="18"/>
     </resources>
 </document>

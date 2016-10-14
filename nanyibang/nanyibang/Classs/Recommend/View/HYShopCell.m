@@ -23,6 +23,7 @@
 + (instancetype)cell{
     return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]firstObject];
 }
+
 - (void)setShop:(HYItemModel *)shop{
     _shop = shop;
     [self.shopImage sd_setImageWithURL:[NSURL URLWithString:self.shop.pic_url]];
