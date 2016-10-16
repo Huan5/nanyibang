@@ -139,17 +139,17 @@
     UILabel *lab2 = self.collocation2View.subviews.lastObject;
     lab2.text = them2.themeDesc;
     
-    for (int i = 0; i<them1.matches.count; i ++) {
-        HYCollocationModel *model = them1.matches[i];
+    for (int i = 0; i<them1.HYCollocationModelArr.count; i ++) {
+        HYCollocationModel *model = them1.HYCollocationModelArr[i];
         UIButton *btn = self.collocation1View.subviews[i];
         btn.tag = i;
         [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
     }
     
-    for (int i = 0; i<them2.matches.count; i ++) {
-        HYCollocationModel *model = them2.matches[i];
+    for (int i = 0; i<them2.HYCollocationModelArr.count; i ++) {
+        HYCollocationModel *model = them2.HYCollocationModelArr[i];
         UIButton *btn = self.collocation2View.subviews[i];
-        btn.tag = i+them2.matches.count;
+        btn.tag = i+them2.HYCollocationModelArr.count;
         [self setImagewithBtn:btn URLString:model.big_image action:@selector(collocationAction:)];
     }
     

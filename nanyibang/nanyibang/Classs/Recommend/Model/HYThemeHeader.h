@@ -25,9 +25,9 @@
 /**搭配主题名字*/
 @property(nonatomic,strong)NSString *themeDesc;
 ///**搭配模型数组*/
-//@property(nonatomic,strong)NSMutableArray *HYCollocationModelArr;
+@property(nonatomic,strong)NSMutableArray *HYCollocationModelArr;
 /**搭配模型数组*/
-@property(nonatomic,strong)NSMutableArray *matches;
+//@property(nonatomic,strong)NSMutableArray *matches;
 /**帅吧模型数组*/
 @property(nonatomic,strong)NSMutableArray *school;
 

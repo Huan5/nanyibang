@@ -15,13 +15,13 @@
 
 + (NSDictionary *)mj_objectClassInArray{
     
-    return @{@"matches": @"HYCollocationModel",
+    return @{@"HYCollocationModelArr": @"HYCollocationModel",
              @"school":[HYDiscoverModel class]
              };
 }
 +(NSDictionary *)mj_replacedKeyFromPropertyName{
     return @{
-             //@"HYCollocationModelArr" : @"matches"
+             @"HYCollocationModelArr" : @"matches"
              };
 }
 @end

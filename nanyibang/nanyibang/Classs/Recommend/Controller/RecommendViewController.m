@@ -69,7 +69,7 @@ static NSString *cellID = @"shopCell";
     //流水布局设置
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init] ;
     [layout setHeaderReferenceSize:CGSizeMake(HYScreenW, HYRecommendHeaderHeight)];
-    layout.itemSize = CGSizeMake((HYScreenW-3 * HYMargin)/2, 280);
+    layout.itemSize = CGSizeMake((HYScreenW-3 * HYMargin)/2,240);
     layout.minimumInteritemSpacing = HYMargin;
     layout.minimumLineSpacing = HYMargin;
     layout.sectionInset = UIEdgeInsetsMake(HYMargin, HYMargin, HYMargin, HYMargin);
